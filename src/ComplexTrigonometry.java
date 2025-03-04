@@ -1,5 +1,5 @@
 public class ComplexTrigonometry {
-    public double trigonometryArgue(ComplexNum num){
+    public double trigonometryArgue(ComplexNum num) {
         if(num.getX() > 0 && num.getY() > 0){
             return Math.atan(num.getX() / num.getY());
         }

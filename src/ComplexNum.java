@@ -23,7 +23,7 @@ public class ComplexNum {
     public double abs(){
         return Math.sqrt(x * x + y * y);
     }
-    public double argueNum(){
+    public double argueNum() throws Exception{
         if(abs() == 0){
             throw new IllegalArgumentException("Модуль равен нулю!");
         }
