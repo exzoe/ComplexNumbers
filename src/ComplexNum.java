@@ -1,35 +1,36 @@
 public class ComplexNum {
-    private final double x;
-    private final double y;
+    private final double re;
+    private final double im;
 
     public ComplexNum(double x, double y){
-        this.x = x;
-        this.y = y;
+        this.re = x;
+        this.im = y;
     }
 
     public double getX() {
-        return x;
+        return re;
     }
 
     public double getY(){
-        return y;
+        return im;
     }
 
     @Override
     public String toString(){
-        return "Это комплексное число. Действительная часть = " + x + ", Мнимая = " + y + "i";
+        return "Это комплексное число. Действительная часть = " + getX() + ", Мнимая = " + im + "i";
     }
 
     public double abs(){
-        return Math.sqrt(x * x + y * y);
+        return Math.sqrt(getX() * getX() + getY() * getY());
     }
+
     public double argueNum() throws Exception{
         if(abs() == 0){
             throw new IllegalArgumentException("Модуль равен нулю!");
         }
         else{
-            return Math.acos(x / abs());
-            //return Math.asin(y / abs());
+            return Math.acos(getX() / abs());
+            //return Math.asin(getY() / abs());
         }
     }
 }

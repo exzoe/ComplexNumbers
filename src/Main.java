@@ -8,5 +8,8 @@ public class Main {
         System.out.println(numTwo);
         double result = trigonometry.trigonometryForm(numOne);
         System.out.println(result);
+        ComplexNum numSum = operations.sum(numOne, numTwo);
+        System.out.println(numSum);
+
     }
 }
